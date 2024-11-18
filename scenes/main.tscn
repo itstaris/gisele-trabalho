@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://ds4u781a8lie2"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_0o0yt"]
+[ext_resource type="PackedScene" uid="uid://cg1uixnnpggn5" path="res://scenes/cena2.tscn" id="1_kxvpr"]
+[ext_resource type="PackedScene" uid="uid://drkgy5ralxbro" path="res://scenes/ground.tscn" id="3_1gwas"]
+[ext_resource type="PackedScene" uid="uid://bu8fuow0fcnsh" path="res://prefabs/vaquinha.tscn" id="3_xgc46"]
+[ext_resource type="PackedScene" uid="uid://c6dp2ra3rh4cv" path="res://prefabs/bambi.tscn" id="5_t4gmp"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0o0yt")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_kxvpr")]
+scale = Vector2(1.79, 1.79)
+transform = Transform2D(1.79, 0, 0, 1.79, 0, 0)
+
+[node name="ground" parent="." instance=ExtResource("3_1gwas")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1266, 585)
+scale = Vector2(2.21, 2.21)
+
+[node name="vaquinha" parent="." instance=ExtResource("3_xgc46")]
+position = Vector2(1901, 867)
+scale = Vector2(16, 16)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_t4gmp")]
+position = Vector2(384, 959)
+scale = Vector2(16, 16)
