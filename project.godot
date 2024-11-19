@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="mudancas-climaticas"
-run/main_scene="res://prefabs/player.tscn"
+run/main_scene="res://scences timo/cena_principal.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,6 +21,10 @@ window/size/viewport_width=2532
 window/size/viewport_height=1170
 window/size/resizable=false
 window/stretch/mode="canvas_items"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 

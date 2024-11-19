@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://7i23bneyp2g7"]
+
+[ext_resource type="Texture2D" uid="uid://blnayfmqe7eyc" path="res://assets/background/plx-1.png" id="1_cgkh0"]
+[ext_resource type="Script" path="res://scripts timo/menu.gd" id="2_hntmq"]
+
+[node name="menu" type="Sprite2D"]
+position = Vector2(1264, 594)
+scale = Vector2(2.1875, 1.82099)
+texture = ExtResource("1_cgkh0")
+script = ExtResource("2_hntmq")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -167.314
+offset_top = -63.7017
+offset_right = 137.686
+offset_bottom = 11.2983
+theme_override_font_sizes/font_size = 48
+text = "Play"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

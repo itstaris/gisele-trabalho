@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://blb61dgrmk3v3"]
+
+[ext_resource type="Texture2D" uid="uid://dg541l10ljbsp" path="res://assets/background/mapa-mundi-em-fundo-azul.webp" id="1_35el5"]
+[ext_resource type="Script" path="res://scripts timo/lobby.gd" id="1_ux8m7"]
+[ext_resource type="Texture2D" uid="uid://blnayfmqe7eyc" path="res://assets/background/plx-1.png" id="2_7j5s2"]
+[ext_resource type="Texture2D" uid="uid://bcv2khmof4dxt" path="res://assets/background/plx-2.png" id="3_4kwju"]
+[ext_resource type="Texture2D" uid="uid://cbskf5jd0q6ak" path="res://assets/background/plx-3.png" id="5_nibxs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykqjq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7j5s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4kwju")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7j5s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7j5s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7j5s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7j5s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nibxs")
+}],
+"loop": false,
+"name": &"escolhido",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ux8m7")
+
+[node name="mapa" type="Sprite2D" parent="."]
+position = Vector2(1266, 586)
+scale = Vector2(4.22, 3.40237)
+texture = ExtResource("1_35el5")
+
+[node name="america do norte" type="AnimatedSprite2D" parent="."]
+position = Vector2(591, 465)
+scale = Vector2(0.0720486, 0.0956791)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"escolhido"
+autoplay = "default"
+
+[node name="russia" type="AnimatedSprite2D" parent="."]
+position = Vector2(1835, 366)
+scale = Vector2(0.0720486, 0.0956791)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"escolhido"
+autoplay = "default"
+
+[node name="africa" type="AnimatedSprite2D" parent="."]
+position = Vector2(1362, 703)
+scale = Vector2(0.0720486, 0.0956791)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+autoplay = "default"
+frame_progress = 0.406081
+
+[node name="brasil" type="AnimatedSprite2D" parent="."]
+position = Vector2(834, 810)
+scale = Vector2(0.0720486, 0.0956791)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+autoplay = "default"
+frame_progress = 0.406081
+
+[connection signal="animation_finished" from="america do norte" to="." method="_on_america_do_norte_animation_finished"]
+[connection signal="animation_finished" from="russia" to="." method="_on_russia_animation_finished"]
