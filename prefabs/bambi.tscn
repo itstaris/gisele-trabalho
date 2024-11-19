@@ -40,7 +40,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -54,4 +54,4 @@ shape = SubResource("CapsuleShape2D_rlv27")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yh5f5")
 animation = &"Idle"
-frame_progress = 0.613841
+frame_progress = 0.0772666

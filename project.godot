@@ -22,6 +22,10 @@ window/size/viewport_height=1170
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [layer_names]
 
 2d_physics/layer_1="world"
