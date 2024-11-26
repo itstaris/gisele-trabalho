@@ -16,8 +16,8 @@ func _process(delta: float) -> void:
 		if escolhendo_mapa % 2 != 0:
 			$"america do norte".play("escolhido")
 		else:
-			$russia.play("escolhido")
-
+			#$russia.play("escolhido")
+			$"america do norte".play("escolhido")
 
 func _on_america_do_norte_animation_finished() -> void:
 	get_tree().change_scene_to_file("res://scences timo/cena_principal.tscn")

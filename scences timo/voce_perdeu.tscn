@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjvt3n52qu5ul"]
+
+[ext_resource type="Script" path="res://scripts timo/voce_perdeu.gd" id="1_occia"]
+
+[node name="Voce perdeu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_occia")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2536.0
+offset_bottom = 1173.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 989.0
+offset_top = 196.0
+offset_right = 1592.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 100
+text = "Voce perdeu"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 558.0
+offset_right = 1719.0
+offset_bottom = 676.0
+theme_override_font_sizes/font_size = 60
+text = "Voltar para o menu "
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

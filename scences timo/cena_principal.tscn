@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://busv08ge5oc6o"]
+[gd_scene load_steps=6 format=3 uid="uid://busv08ge5oc6o"]
 
+[ext_resource type="Script" path="res://scripts timo/cena_principal.gd" id="1_d8nuh"]
 [ext_resource type="PackedScene" uid="uid://brch3evg7odt5" path="res://prefarbs/pessoa_1.tscn" id="1_kkci2"]
 [ext_resource type="PackedScene" uid="uid://dq7242xee1n03" path="res://prefarbs/pessoa_2.tscn" id="3_u7qcn"]
 [ext_resource type="PackedScene" uid="uid://6uwnj7tp4oft" path="res://prefarbs/banker.tscn" id="5_05g2o"]
+[ext_resource type="Script" path="res://scripts timo/timer_bar.gd" id="5_waxsc"]
 
 [node name="Cena principal" type="Node2D"]
+script = ExtResource("1_d8nuh")
 
 [node name="pessoa1" parent="." instance=ExtResource("1_kkci2")]
 position = Vector2(983, 402)
@@ -18,6 +21,16 @@ scale = Vector2(3, 3)
 position = Vector2(1199, 521)
 scale = Vector2(3, 3)
 
+[node name="timerBar" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 2532, 0)
+script = ExtResource("5_waxsc")
+
+[node name="Timer" type="Timer" parent="timerBar"]
+wait_time = 0.05
+autostart = true
+
 [connection signal="area_entered" from="pessoa1" to="pessoa1" method="_on_area_entered"]
 [connection signal="area_entered" from="pessoa2" to="pessoa2" method="_on_area_entered"]
 [connection signal="area_entered" from="banker" to="banker" method="_on_area_entered"]
+[connection signal="acabouuuu" from="timerBar" to="." method="_on_timer_bar_acabouuuu"]
+[connection signal="timeout" from="timerBar/Timer" to="timerBar" method="_on_timer_timeout"]
