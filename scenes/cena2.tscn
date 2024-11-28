@@ -1,37 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg1uixnnpggn5"]
+[gd_scene load_steps=4 format=3 uid="uid://cg1uixnnpggn5"]
 
-[ext_resource type="Texture2D" uid="uid://blnayfmqe7eyc" path="res://assets/background/plx-1.png" id="1_1x2fi"]
-[ext_resource type="Texture2D" uid="uid://bcv2khmof4dxt" path="res://assets/background/plx-2.png" id="2_iu5vw"]
-[ext_resource type="Texture2D" uid="uid://cbskf5jd0q6ak" path="res://assets/background/plx-3.png" id="3_qrsuc"]
-[ext_resource type="Texture2D" uid="uid://dwtr7i557b0n7" path="res://assets/background/plx-5.png" id="4_wwn4k"]
+[ext_resource type="Texture2D" uid="uid://bynodlbuqtuxf" path="res://assets/fundo_bambi/bambi_fundo(1).png" id="1_3rbdi"]
+[ext_resource type="Texture2D" uid="uid://d2t3qd65enb8h" path="res://assets/fundo_bambi/bambi_fundo(2).png" id="2_4844h"]
+[ext_resource type="Texture2D" uid="uid://c6pwf5j7mpt77" path="res://assets/fundo_bambi/bambi_arvores(5).png" id="3_1lgj1"]
 
-[node name="ParallaxBackground" type="ParallaxBackground"]
+[node name="fundo" type="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 1)
-texture = ExtResource("1_1x2fi")
+texture = ExtResource("1_3rbdi")
 centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.3, 1)
-motion_mirroring = Vector2(1152, 0)
+motion_mirroring = Vector2(2532, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-texture = ExtResource("2_iu5vw")
+texture = ExtResource("2_4844h")
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.4, 1)
-motion_mirroring = Vector2(1152, 0)
+motion_mirroring = Vector2(2532, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
-texture = ExtResource("3_qrsuc")
-centered = false
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
-motion_scale = Vector2(0.8, 1)
-motion_mirroring = Vector2(1152, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
-texture = ExtResource("4_wwn4k")
+texture = ExtResource("3_1lgj1")
 centered = false

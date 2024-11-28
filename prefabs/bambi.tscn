@@ -1,42 +1,34 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6dp2ra3rh4cv"]
+[gd_scene load_steps=8 format=3 uid="uid://c6dp2ra3rh4cv"]
 
 [ext_resource type="Script" path="res://prefabs/character_body_2d.gd" id="1_k2k7s"]
-[ext_resource type="Texture2D" uid="uid://ce2tscwnilu6h" path="res://assets/Sprout Lands - Sprites - Basic pack/Characters/Free Chicken Sprites.png" id="2_njb7x"]
+[ext_resource type="Texture2D" uid="uid://dp3obomsi8n4w" path="res://assets/bambi/bambi_referenciaCorrendo.png" id="2_gtl3w"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rlv27"]
-radius = 4.0
-height = 12.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3essv"]
+size = Vector2(388, 410)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lk5aq"]
-atlas = ExtResource("2_njb7x")
-region = Rect2(0, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_eumra"]
+atlas = ExtResource("2_gtl3w")
+region = Rect2(213, 0, 577, 1157)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eav27"]
-atlas = ExtResource("2_njb7x")
-region = Rect2(16, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_frhd0"]
+atlas = ExtResource("2_gtl3w")
+region = Rect2(812, 0, 577, 1157)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_th1kw"]
-atlas = ExtResource("2_njb7x")
-region = Rect2(32, 16, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7l7n5"]
-atlas = ExtResource("2_njb7x")
-region = Rect2(48, 16, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kypiu"]
+atlas = ExtResource("2_gtl3w")
+region = Rect2(1411, 0, 577, 1157)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yh5f5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lk5aq")
+"texture": SubResource("AtlasTexture_eumra")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eav27")
+"texture": SubResource("AtlasTexture_frhd0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_th1kw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7l7n5")
+"texture": SubResource("AtlasTexture_kypiu")
 }],
 "loop": true,
 "name": &"Idle",
@@ -47,11 +39,11 @@ animations = [{
 collision_layer = 2
 script = ExtResource("1_k2k7s")
 
-[node name="collsion" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
-shape = SubResource("CapsuleShape2D_rlv27")
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 206)
+shape = SubResource("RectangleShape2D_3essv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yh5f5")
 animation = &"Idle"
-frame_progress = 0.0772666
+frame_progress = 0.918303

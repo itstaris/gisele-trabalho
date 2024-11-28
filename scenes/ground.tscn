@@ -1,18 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://drkgy5ralxbro"]
 
-[ext_resource type="Texture2D" uid="uid://dw06lsj655qk0" path="res://assets/background/ground.png" id="1_secdt"]
+[ext_resource type="Texture2D" uid="uid://dh6n3qanyw7sl" path="res://assets/fundo_bambi/Bambi_chão(3).png" id="1_cjhlx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4f0ee"]
-size = Vector2(2532, 90)
+size = Vector2(2532, 260)
 
 [node name="ground" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1074)
-scale = Vector2(1.09896, 1)
-texture = ExtResource("1_secdt")
-centered = false
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1266, 1125)
+position = Vector2(1266, 1040)
 shape = SubResource("RectangleShape2D_4f0ee")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cjhlx")
+centered = false
