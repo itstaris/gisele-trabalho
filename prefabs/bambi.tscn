@@ -1,7 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://c6dp2ra3rh4cv"]
+[gd_scene load_steps=21 format=3 uid="uid://c6dp2ra3rh4cv"]
 
 [ext_resource type="Script" path="res://prefabs/character_body_2d.gd" id="1_k2k7s"]
 [ext_resource type="Texture2D" uid="uid://dp3obomsi8n4w" path="res://assets/bambi/bambi_referenciaCorrendo.png" id="2_gtl3w"]
+[ext_resource type="Texture2D" uid="uid://cgxc0ywd4weqm" path="res://assets/bambi_morrendo/bambi_morrendo(1).png" id="3_a6ymc"]
+[ext_resource type="Texture2D" uid="uid://cnugc62dyb06" path="res://assets/bambi/referencia da animaInicial.png" id="3_xet6v"]
+[ext_resource type="Texture2D" uid="uid://cleiu2tgborew" path="res://assets/bambi_morrendo/bambi_morrendo(2).png" id="4_ca82c"]
+[ext_resource type="Texture2D" uid="uid://usm6epilfam8" path="res://assets/bambi_morrendo/bambi_morrendo(3).png" id="5_3qv2r"]
+[ext_resource type="Texture2D" uid="uid://cmkyfoduvklli" path="res://assets/bambi_morrendo/bambi_morrendo(4).png" id="6_c44wh"]
+[ext_resource type="Texture2D" uid="uid://cfkgmh2k6yv60" path="res://assets/bambi_morrendo/bambi_morrendo(5).png" id="7_quonx"]
+[ext_resource type="Texture2D" uid="uid://cckgikfsfbgn3" path="res://assets/bambi_morrendo/bambi_morrendo(6).png" id="8_uvgc1"]
+[ext_resource type="Texture2D" uid="uid://dp385ibwak0jm" path="res://assets/bambi_morrendo/bambi_morrendo(7).png" id="9_ebcuw"]
+[ext_resource type="Texture2D" uid="uid://c2e65srpavokm" path="res://assets/bambi_morrendo/bambi_morrendo(8).png" id="10_78vr2"]
+[ext_resource type="Texture2D" uid="uid://d2jahkeeohety" path="res://assets/bambi_morrendo/bambi_morrendo(9-final).png" id="11_mva7l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3essv"]
 size = Vector2(388, 410)
@@ -18,6 +28,18 @@ region = Rect2(812, 0, 577, 1157)
 atlas = ExtResource("2_gtl3w")
 region = Rect2(1411, 0, 577, 1157)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xfvc"]
+atlas = ExtResource("3_xet6v")
+region = Rect2(214, 0, 601, 1165)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du0m5"]
+atlas = ExtResource("3_xet6v")
+region = Rect2(815, 0, 601, 1165)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lb3v"]
+atlas = ExtResource("3_xet6v")
+region = Rect2(1416, 0, 601, 1165)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_yh5f5"]
 animations = [{
 "frames": [{
@@ -32,7 +54,62 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 7.0
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xfvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du0m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lb3v")
+}],
+"loop": false,
+"name": &"inicio",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a6ymc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ca82c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3qv2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c44wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_quonx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uvgc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ebcuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_78vr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mva7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mva7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mva7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mva7l")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 10.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -46,4 +123,6 @@ shape = SubResource("RectangleShape2D_3essv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yh5f5")
 animation = &"Idle"
-frame_progress = 0.918303
+frame_progress = 0.391985
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
