@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://7i23bneyp2g7"]
 
-[ext_resource type="Texture2D" uid="uid://blnayfmqe7eyc" path="res://assets/background/plx-1.png" id="1_cgkh0"]
+[ext_resource type="Texture2D" uid="uid://blnayfmqe7eyc" path="res://Assets Roubados/background/plx-1.png" id="1_cgkh0"]
 [ext_resource type="Script" path="res://scripts timo/menu.gd" id="2_hntmq"]
 
 [node name="menu" type="Sprite2D"]
-position = Vector2(1264, 594)
-scale = Vector2(2.1875, 1.82099)
+position = Vector2(1268, 584)
+scale = Vector2(2.19444, 1.79012)
 texture = ExtResource("1_cgkh0")
 script = ExtResource("2_hntmq")
 

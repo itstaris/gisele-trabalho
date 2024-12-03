@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var lv_banker = 2
+@export var lv_banker = 3
 @export var pessoas = 0
 
 func _ready() -> void:

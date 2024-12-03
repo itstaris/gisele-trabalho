@@ -3,7 +3,7 @@ extends Line2D
 signal acabouuuu;
 
 func decrease():
-	points[1].x -=24;
+	points[1].x -=64;
 	
 func time_over():
 	return points[1].x <=0;

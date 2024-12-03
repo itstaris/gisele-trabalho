@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://6uwnj7tp4oft"]
+
+[ext_resource type="Script" path="res://scripts timo/banker.gd" id="1_6tp4r"]
+[ext_resource type="Texture2D" uid="uid://bdyb7pdc5wbl3" path="res://Assets verdadeiros/Banker.png" id="2_c430e"]
+[ext_resource type="Texture2D" uid="uid://dl12io7me4b62" path="res://Assets verdadeiros/PlacaBanker (1).png" id="3_dli1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_756xp"]
+size = Vector2(996, 288)
+
+[node name="banker" type="Area2D"]
+script = ExtResource("1_6tp4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -27)
+shape = SubResource("RectangleShape2D_756xp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-912, -786)
+texture = ExtResource("2_c430e")
+
+[node name="PlacaBanker(1)" type="Sprite2D" parent="."]
+position = Vector2(264, -585)
+texture = ExtResource("3_dli1i")

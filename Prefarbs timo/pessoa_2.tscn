@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq7242xee1n03"]
+
+[ext_resource type="Script" path="res://scripts timo/pessoa_2.gd" id="1_wdwbf"]
+[ext_resource type="Texture2D" uid="uid://brhanxkh0snmt" path="res://Assets verdadeiros/batataLaranja (1).png" id="2_vsx1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwcd0"]
+size = Vector2(40, 61)
+
+[node name="pessoa2" type="Area2D"]
+script = ExtResource("1_wdwbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_vwcd0")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(-35, -48)
+scale = Vector2(0.135, 0.12)
+texture_normal = ExtResource("2_vsx1d")
+
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_touch_screen_button_released"]

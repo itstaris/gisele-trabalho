@@ -11,14 +11,18 @@ config_version=5
 [application]
 
 config/name="mudancas-climaticas"
-run/main_scene="res://scences timo/cena_principal.tscn"
+run/main_scene="res://scences timo/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://Globals timo/globals.gd"
+
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=2532
+window/size/viewport_height=1170
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 
