@@ -5,6 +5,8 @@ var play : bool
 #const PLAYER_START_POS := Vector2i(2078, 492)
 const START_SPEED : float = 14.0
 const CAM_START_POS := Vector2i(1266, 585)
+var vive : bool
+
 
 func _ready() -> void:
 	new_game()
@@ -22,4 +24,8 @@ func _process(delta: float) -> void:
 	speed = START_SPEED
 	if play:
 		$Camera2D.position.x += speed + 10
-		
+
+
+func _on_timer_bar_acabouuuu() -> void:
+	Globals.pontitos += 1
+	get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")

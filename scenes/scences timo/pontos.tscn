@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c508aa02xckpg"]
+
+[ext_resource type="Script" path="res://scripts/scripts timo/pontos.gd" id="1_p2hy4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w7ba7"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_gschv"]
+font_size = 64
+
+[node name="pontos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2hy4")
+
+[node name="numeros" type="Label" parent="."]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 1.0
+offset_right = 287.0
+offset_bottom = 89.0
+text = "0"
+label_settings = SubResource("LabelSettings_w7ba7")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Pontos:"
+label_settings = SubResource("LabelSettings_gschv")
+metadata/_edit_use_anchors_ = true

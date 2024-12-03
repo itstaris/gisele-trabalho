@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://busv08ge5oc6o"]
+
+[ext_resource type="Script" path="res://scripts/scripts timo/cena_principal.gd" id="1_p3eqj"]
+[ext_resource type="Texture2D" uid="uid://ban0816hhnptp" path="res://Assets verdadeiros/FundoFuracao.png" id="2_x7hb7"]
+[ext_resource type="Texture2D" uid="uid://bfufne25s8g8t" path="res://Assets verdadeiros/furacao.png" id="3_xm28x"]
+[ext_resource type="PackedScene" uid="uid://6uwnj7tp4oft" path="res://prefabs/Prefarbs timo/banker.tscn" id="4_k5rsn"]
+[ext_resource type="PackedScene" uid="uid://brch3evg7odt5" path="res://prefabs/Prefarbs timo/pessoa_1.tscn" id="5_pb30e"]
+[ext_resource type="PackedScene" uid="uid://dq7242xee1n03" path="res://prefabs/Prefarbs timo/pessoa_2.tscn" id="6_qyp25"]
+[ext_resource type="PackedScene" uid="uid://ce7qgil8pnqgl" path="res://prefabs/Prefarbs timo/pessoa_3.tscn" id="7_1gr8n"]
+[ext_resource type="Script" path="res://scripts/scripts timo/timer_bar.gd" id="8_jpdms"]
+
+[node name="Furacão" type="Node2D"]
+script = ExtResource("1_p3eqj")
+
+[node name="FundoFuracao" type="Sprite2D" parent="."]
+position = Vector2(1266, 585.5)
+scale = Vector2(0.659375, 0.541204)
+texture = ExtResource("2_x7hb7")
+
+[node name="Furacao" type="Sprite2D" parent="."]
+position = Vector2(1265, 589.76)
+scale = Vector2(0.657812, 0.543741)
+texture = ExtResource("3_xm28x")
+
+[node name="banker" parent="." instance=ExtResource("4_k5rsn")]
+position = Vector2(1918, 994)
+scale = Vector2(0.5, 0.5)
+
+[node name="pessoa1" parent="." instance=ExtResource("5_pb30e")]
+position = Vector2(1173, 738)
+scale = Vector2(3.5, 3.5)
+
+[node name="pessoa2" parent="." instance=ExtResource("6_qyp25")]
+position = Vector2(769, 1029)
+scale = Vector2(3, 3)
+
+[node name="pessoa3" parent="." instance=ExtResource("7_1gr8n")]
+position = Vector2(216, 832)
+scale = Vector2(2, 2)
+
+[node name="timerBar" type="Line2D" parent="."]
+position = Vector2(-3, 15)
+scale = Vector2(0.33815, 1.00461)
+points = PackedVector2Array(0, 0, 7482.6, 0)
+width = 25.0
+script = ExtResource("8_jpdms")
+
+[node name="Timer" type="Timer" parent="timerBar"]
+wait_time = 0.05
+autostart = true
+
+[connection signal="area_entered" from="banker" to="banker" method="_on_area_entered"]
+[connection signal="area_entered" from="pessoa1" to="pessoa1" method="_on_area_entered"]
+[connection signal="area_entered" from="pessoa2" to="pessoa2" method="_on_area_entered"]
+[connection signal="area_entered" from="pessoa3" to="pessoa3" method="_on_area_entered"]
+[connection signal="acabouuuu" from="timerBar" to="." method="_on_timer_bar_acabouuuu"]
+[connection signal="timeout" from="timerBar/Timer" to="timerBar" method="_on_timer_timeout"]

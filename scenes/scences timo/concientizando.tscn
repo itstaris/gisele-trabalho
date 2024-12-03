@@ -1,0 +1,175 @@
+[gd_scene load_steps=14 format=3 uid="uid://byu4j3nym0hy7"]
+
+[ext_resource type="Script" path="res://scripts/scripts timo/concientizando.gd" id="1_668ib"]
+[ext_resource type="Texture2D" uid="uid://ban0816hhnptp" path="res://Assets verdadeiros/FundoFuracao.png" id="1_ugvbc"]
+[ext_resource type="Texture2D" uid="uid://bfufne25s8g8t" path="res://Assets verdadeiros/furacao.png" id="2_7e78y"]
+[ext_resource type="Texture2D" uid="uid://wj53vnnqqbqj" path="res://Assets verdadeiros/FundoIceBerg.png" id="3_mfsng"]
+[ext_resource type="Texture2D" uid="uid://bovdc0v3r7rla" path="res://Assets verdadeiros/planta_cenário.png" id="4_6bpi5"]
+[ext_resource type="Texture2D" uid="uid://5j8wywfhtdi8" path="res://Assets verdadeiros/planta_morrendo(5).png" id="5_xagqb"]
+[ext_resource type="Texture2D" uid="uid://bksee62hufnyb" path="res://Assets verdadeiros/planta_morreu(6).png" id="6_mkwrr"]
+[ext_resource type="Texture2D" uid="uid://vkmuhtx8aiqo" path="res://Assets verdadeiros/fundoRoupas.png" id="7_d7kcu"]
+[ext_resource type="Texture2D" uid="uid://d2bo5kirkrm7m" path="res://Assets verdadeiros/caixaRoupas.png" id="8_ep3eq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mmw6"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kc7r3"]
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wc4sw"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[sub_resource type="Theme" id="Theme_chm0v"]
+Button/styles/normal = SubResource("StyleBoxFlat_wc4sw")
+
+[node name="Concientizando" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_668ib")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2534.0
+offset_bottom = 1170.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2mmw6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 265.0
+offset_right = 1361.0
+offset_bottom = 550.0
+text = "“Ciclones”:
+
+O ciclone Idai, em 2019, devastou Moçambique, Zimbátue 
+e Malawi. Ideia de cenário: Tem que arrastar os objetos 
+para o chão (baixo), os impedindo de voarem e chegarem 
+no ciclone. "
+label_settings = SubResource("LabelSettings_kc7r3")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1657.0
+offset_top = 225.0
+offset_right = 2469.0
+offset_bottom = 629.0
+text = "Secas”:
+
+A África Austral está passando por uma seca severa.
+ Além dos desastres naturais, a África também enfrenta outros 
+desafios ambientais, como: degradação da terra, desmatamento, 
+perda da biodiversidade e etc. Ideia de cenário:
+Tem que arrastar o regador para regar as plantas, seu objetivo é regar
+ até nascer o milho e não deixar ela morrer.
+e Malawi. Ideia de cenário: Tem que arrastar os objetos 
+para o chão (baixo), os impedindo de voarem e chegarem 
+no ciclone. "
+label_settings = SubResource("LabelSettings_kc7r3")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 733.0
+offset_right = 1317.0
+offset_bottom = 1063.0
+text = "“Derretimento das geleiras”:
+
+O aquecimento global tem provocado um aumento das temperaturas,
+ o que leva ao derretimento das geleiras. Em 2022, parte do gelo que
+ abrigava os ninhais dos pinguins-imperador quebrou, matando milhares
+ de filhotes. Ideia de cenário:
+O pinguim tem que pular entre os blocos de gelo para fugir da água que 
+não para de subir. Mesma dinâmica do “incêndios florestais”, só clicar
+ na tela."
+label_settings = SubResource("LabelSettings_kc7r3")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1747.0
+offset_top = 690.0
+offset_right = 2496.0
+offset_bottom = 909.0
+text = "“Consumo excessivo”:
+
+Por serem grandes consumidores, esses veem desenvolvendo 
+dinâmicas para diminuir a quantidade de resíduos (lixo). Ideia de 
+cenário: Separação de roupas, as de boa qualidade vão para 
+adoação e as de péssima qualidade vão para o lixo."
+label_settings = SubResource("LabelSettings_kc7r3")
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 44.0
+offset_right = 280.0
+offset_bottom = 189.0
+theme = SubResource("Theme_chm0v")
+theme_override_font_sizes/font_size = 100
+text = "<="
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(303, 369)
+
+[node name="FundoFuracao" type="Sprite2D" parent="Node2D"]
+position = Vector2(-41, 6)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ugvbc")
+
+[node name="Furacao" type="Sprite2D" parent="Node2D"]
+position = Vector2(-41, 6)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_7e78y")
+
+[node name="FundoIceBerg" type="Sprite2D" parent="."]
+position = Vector2(259, 840)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_mfsng")
+
+[node name="Node2D3" type="Node2D" parent="."]
+position = Vector2(1478, 786)
+scale = Vector2(0.1, 0.1)
+
+[node name="PlantaCenário" type="Sprite2D" parent="Node2D3"]
+position = Vector2(-600, -4420)
+scale = Vector2(1.5237, 1.84872)
+texture = ExtResource("4_6bpi5")
+
+[node name="PlantaMorrendo(5)" type="Sprite2D" parent="Node2D3"]
+position = Vector2(-570, -4420)
+scale = Vector2(1.5, 1.85)
+texture = ExtResource("5_xagqb")
+
+[node name="PlantaMorreu(6)" type="Sprite2D" parent="Node2D3"]
+position = Vector2(-570, -4420)
+scale = Vector2(1.5, 1.85)
+texture = ExtResource("6_mkwrr")
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(1564, 826)
+scale = Vector2(0.1, 0.1)
+
+[node name="FundoRoupas" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-320, 60)
+scale = Vector2(1, 1)
+texture = ExtResource("7_d7kcu")
+
+[node name="CaixaRoupas" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-299.25, 507.251)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ep3eq")
+
+[node name="CaixaRoupas2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(-1499.25, 467.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ep3eq")
+
+[node name="CaixaRoupas3" type="Sprite2D" parent="Node2D2"]
+position = Vector2(880.75, 447.25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ep3eq")
+
+[connection signal="button_down" from="Return" to="." method="_on_return_button_down"]

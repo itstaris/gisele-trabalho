@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce7qgil8pnqgl"]
+
+[ext_resource type="Script" path="res://scripts/scripts timo/pessoa_3.gd" id="1_jdl2s"]
+[ext_resource type="Texture2D" uid="uid://d0ug3anngfuud" path="res://Assets verdadeiros/batataRoxa (1).png" id="2_ptl4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgexw"]
+size = Vector2(38, 78)
+
+[node name="pessoa3" type="Area2D"]
+script = ExtResource("1_jdl2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 2)
+shape = SubResource("RectangleShape2D_vgexw")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(-36, -72)
+scale = Vector2(0.196774, 0.196774)
+texture_normal = ExtResource("2_ptl4f")
+
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="released" from="TouchScreenButton" to="." method="_on_touch_screen_button_released"]

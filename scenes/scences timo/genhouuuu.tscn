@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://dd45yvi4fcmx1"]
+
+[ext_resource type="Texture2D" uid="uid://cefcamab2ofw6" path="res://Assets verdadeiros/Sorrindo0.png" id="1_8bmhm"]
+[ext_resource type="Script" path="res://scripts/scripts timo/genhouuuu.gd" id="1_r3gyj"]
+[ext_resource type="Texture2D" uid="uid://d34hqe7jiwry0" path="res://Assets verdadeiros/Sorrindo1.png" id="2_jkgdi"]
+[ext_resource type="Texture2D" uid="uid://bfannighwmdrq" path="res://Assets verdadeiros/Sorrindo2.png" id="3_1yklh"]
+[ext_resource type="Texture2D" uid="uid://cs8caoo4nxwho" path="res://Assets verdadeiros/Sorrindo3.png" id="4_pl1v7"]
+[ext_resource type="Texture2D" uid="uid://to1sjx1qgkof" path="res://Assets verdadeiros/Sorrindo4.png" id="5_40byh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6de0"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u1bos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8bmhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jkgdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1yklh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pl1v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_40byh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="ganhou" type="Node2D"]
+script = ExtResource("1_r3gyj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 2535.0
+offset_bottom = 1160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x6de0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1225, 570)
+sprite_frames = SubResource("SpriteFrames_u1bos")
+autoplay = "default"
+frame_progress = 0.963669
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

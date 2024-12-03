@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjvt3n52qu5ul"]
+
+[ext_resource type="Script" path="res://scripts/scripts timo/voce_perdeu.gd" id="1_sqghy"]
+[ext_resource type="Texture2D" uid="uid://ba0lswxf4ca3q" path="res://Assets verdadeiros/Mundo pegando fogo 1.png" id="2_g1m2m"]
+[ext_resource type="Texture2D" uid="uid://bobscpudbbaqe" path="res://Assets verdadeiros/Mundo pegando fogo 2.png" id="3_3w33q"]
+[ext_resource type="Texture2D" uid="uid://bb0qf0vcsv7qs" path="res://Assets verdadeiros/Mundo pegando fogo 3.png" id="4_ipyff"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ye2r6"]
+bg_color = Color(0.0591259, 0.059126, 0.0591259, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_or8p6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g1m2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3w33q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ipyff")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Voce perdeu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sqghy")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 2523.0
+offset_bottom = 1165.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ye2r6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 85.0
+offset_right = 1579.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 100
+text = "Voce perdeu"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 939.0
+offset_right = 1692.0
+offset_bottom = 1057.0
+theme_override_font_sizes/font_size = 60
+text = "Voltar para o menu "
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1290, 539)
+scale = Vector2(0.443838, 0.443838)
+sprite_frames = SubResource("SpriteFrames_or8p6")
+autoplay = "default"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

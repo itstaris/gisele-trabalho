@@ -1,0 +1,232 @@
+[gd_scene load_steps=9 format=3 uid="uid://blb61dgrmk3v3"]
+
+[ext_resource type="Script" path="res://scripts/scripts timo/lobby.gd" id="1_4wout"]
+[ext_resource type="Texture2D" uid="uid://dg541l10ljbsp" path="res://Assets verdadeiros/mapa-mundi-em-fundo-azul.webp" id="2_7c1g0"]
+[ext_resource type="Texture2D" uid="uid://coiljff36utny" path="res://assets/!.svg" id="3_8pjfv"]
+[ext_resource type="Texture2D" uid="uid://bu1vo2ffgika8" path="res://assets/coraçao.png" id="4_htntk"]
+[ext_resource type="Script" path="res://scripts/scripts timo/coraçao.gd" id="5_us56l"]
+[ext_resource type="Script" path="res://scripts/scripts timo/coraçao_2.gd" id="6_82hqf"]
+[ext_resource type="PackedScene" uid="uid://c508aa02xckpg" path="res://scenes/scences timo/pontos.tscn" id="7_nojl1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykqjq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}],
+"loop": false,
+"name": &"escolhido",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8pjfv")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"piscando",
+"speed": 2.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4wout")
+
+[node name="mapa" type="Sprite2D" parent="."]
+position = Vector2(1266, 584)
+scale = Vector2(4.22, 3.45562)
+texture = ExtResource("2_7c1g0")
+
+[node name="africa" type="AnimatedSprite2D" parent="."]
+position = Vector2(1345, 706)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="oceania" type="AnimatedSprite2D" parent="."]
+position = Vector2(2017, 840)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="america_do_norte" type="AnimatedSprite2D" parent="."]
+position = Vector2(555, 439)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="russia" type="AnimatedSprite2D" parent="."]
+position = Vector2(1875, 328)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="groelandia" type="AnimatedSprite2D" parent="."]
+position = Vector2(942, 208)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="america_central" type="AnimatedSprite2D" parent="."]
+position = Vector2(669, 619)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="europa" type="AnimatedSprite2D" parent="."]
+position = Vector2(1509, 439)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="asia" type="AnimatedSprite2D" parent="."]
+position = Vector2(1881, 682)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="america_do_sul" type="AnimatedSprite2D" parent="."]
+position = Vector2(876, 829)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ykqjq")
+animation = &"piscando"
+autoplay = "piscando"
+
+[node name="Coraçao" type="Sprite2D" parent="."]
+position = Vector2(2128, 112)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_htntk")
+script = ExtResource("5_us56l")
+
+[node name="Coraçao2" type="Sprite2D" parent="."]
+position = Vector2(2256, 112)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_htntk")
+script = ExtResource("6_82hqf")
+
+[node name="Coraçao3" type="Sprite2D" parent="."]
+position = Vector2(2384, 112)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_htntk")
+
+[node name="pontos" parent="." instance=ExtResource("7_nojl1")]
+layout_mode = 1
+
+[connection signal="boom" from="." to="Coraçao" method="_on_control_boom"]
+[connection signal="boom2" from="." to="Coraçao2" method="_on_control_boom_2"]
+[connection signal="animation_finished" from="africa" to="." method="_on_africa_animation_finished"]
+[connection signal="animation_finished" from="oceania" to="." method="_on_oceania_animation_finished"]
