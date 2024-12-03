@@ -26,6 +26,8 @@ func _process(delta: float) -> void:
 		$Camera2D.position.x += speed + 10
 
 
-func _on_timer_bar_acabouuuu() -> void:
+#func _on_timer_bar_acabouuuu() -> void:
+
+func _on_tempe_2_roi() -> void:
 	Globals.pontitos += 1
 	get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")

@@ -7,6 +7,7 @@
 size = Vector2(40, 61)
 
 [node name="pessoa2" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_wdwbf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

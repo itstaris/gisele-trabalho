@@ -39,14 +39,11 @@ position = Vector2(216, 832)
 scale = Vector2(2, 2)
 
 [node name="timerBar" type="Line2D" parent="."]
-position = Vector2(-3, 15)
-scale = Vector2(0.33815, 1.00461)
-points = PackedVector2Array(0, 0, 7482.6, 0)
-width = 25.0
+points = PackedVector2Array(0, 0, 2532, 0)
 script = ExtResource("8_jpdms")
 
 [node name="Timer" type="Timer" parent="timerBar"]
-wait_time = 0.05
+wait_time = 0.1
 autostart = true
 
 [connection signal="area_entered" from="banker" to="banker" method="_on_area_entered"]

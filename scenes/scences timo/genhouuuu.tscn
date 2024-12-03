@@ -38,7 +38,7 @@ script = ExtResource("1_r3gyj")
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 2535.0
-offset_bottom = 1160.0
+offset_bottom = 1171.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_x6de0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

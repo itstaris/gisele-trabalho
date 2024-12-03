@@ -7,7 +7,7 @@ const MAX_SPEED : float = 25.0
 var speed : float
 var dedada = false
 var play : bool
-var vive : bool
+var vive = true
 
 @onready var animacao = $AnimatedSprite2D
 
@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 func anim_morte():
 	animacao.play("morte")
 	print("animação dor")
+	vive = false
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor() or dedada == true and is_on_floor:
 	
 func _on_animated_sprite_2d_animation_finished(anim:String=$AnimatedSprite2D.animation) -> void:
@@ -50,7 +51,7 @@ func _on_animated_sprite_2d_animation_finished(anim:String=$AnimatedSprite2D.ani
 		animacao.play("Idle")
 	if anim=="morte":
 		print("é pra da restart")
-		vive == false
+		#if vive == false:
 		Globals.pepino -=1
 		if Globals.pepino == 0:
 			get_tree().change_scene_to_file("res://scenes/scences timo/voce_perdeu.tscn")
