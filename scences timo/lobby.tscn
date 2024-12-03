@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://blb61dgrmk3v3"]
 
-[ext_resource type="Texture2D" uid="uid://dg541l10ljbsp" path="res://Assets Roubados/background/mapa-mundi-em-fundo-azul.webp" id="1_35el5"]
+[ext_resource type="Texture2D" uid="uid://dg541l10ljbsp" path="res://Assets verdadeiros/mapa-mundi-em-fundo-azul.webp" id="1_35el5"]
 [ext_resource type="Script" path="res://scripts timo/lobby.gd" id="1_ux8m7"]
 [ext_resource type="Texture2D" uid="uid://blnayfmqe7eyc" path="res://Assets Roubados/background/plx-1.png" id="2_7j5s2"]
 [ext_resource type="Texture2D" uid="uid://bcv2khmof4dxt" path="res://Assets Roubados/background/plx-2.png" id="3_4kwju"]

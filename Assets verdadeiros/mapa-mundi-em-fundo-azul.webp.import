@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg541l10ljbsp"
-path="res://.godot/imported/mapa-mundi-em-fundo-azul.webp-0f5627fa1bb8fd46d548007e8dd42cbc.ctex"
+path="res://.godot/imported/mapa-mundi-em-fundo-azul.webp-9f8cfcb79bd7622d243e4ddd53e44640.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets Roubados/background/mapa-mundi-em-fundo-azul.webp"
-dest_files=["res://.godot/imported/mapa-mundi-em-fundo-azul.webp-0f5627fa1bb8fd46d548007e8dd42cbc.ctex"]
+source_file="res://Assets verdadeiros/mapa-mundi-em-fundo-azul.webp"
+dest_files=["res://.godot/imported/mapa-mundi-em-fundo-azul.webp-9f8cfcb79bd7622d243e4ddd53e44640.ctex"]
 
 [params]
 
