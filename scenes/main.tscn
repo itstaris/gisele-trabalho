@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1i67vvbxl6f1"]
+[gd_scene load_steps=8 format=3 uid="uid://c1i67vvbxl6f1"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_0o0yt"]
 [ext_resource type="PackedScene" uid="uid://cg1uixnnpggn5" path="res://scenes/cena2.tscn" id="1_kxvpr"]
 [ext_resource type="PackedScene" uid="uid://drkgy5ralxbro" path="res://scenes/ground.tscn" id="3_1gwas"]
 [ext_resource type="PackedScene" uid="uid://c6dp2ra3rh4cv" path="res://prefabs/bambi.tscn" id="5_t4gmp"]
-[ext_resource type="Script" path="res://scripts/ganhou_bambi.gd" id="7_632it"]
 [ext_resource type="PackedScene" uid="uid://bk5oof1et57j7" path="res://prefabs/fogo.tscn" id="7_cnpdj"]
 [ext_resource type="Script" path="res://scripts/scripts timo/tempe_2.gd" id="7_hvycs"]
 
@@ -65,13 +64,10 @@ script = ExtResource("7_hvycs")
 autostart = true
 
 [node name="Ganhou" type="Area2D" parent="."]
-visible = false
-position = Vector2(8686, 0)
-collision_mask = 2
-script = ExtResource("7_632it")
+position = Vector2(5610, 0)
+collision_layer = 2
 
 [node name="Collision" type="CollisionShape2D" parent="Ganhou"]
-visible = false
 position = Vector2(21, 492)
 shape = SubResource("RectangleShape2D_vm8ak")
 
@@ -79,3 +75,4 @@ shape = SubResource("RectangleShape2D_vm8ak")
 [connection signal="pressed" from="CanvasLayer/Button" to="CharacterBody2D" method="_on_button_pressed"]
 [connection signal="roi" from="tempe2" to="." method="_on_tempe_2_roi"]
 [connection signal="timeout" from="tempe2/Timer" to="tempe2" method="_on_timer_timeout"]
+[connection signal="body_shape_entered" from="Ganhou" to="." method="_on_ganhou_body_shape_entered"]

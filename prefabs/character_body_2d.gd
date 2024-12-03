@@ -8,7 +8,8 @@ var speed : float
 var dedada = false
 var play : bool
 var vive = true
-
+var clicks_doidos =0
+var clicks_max = 12
 @onready var animacao = $AnimatedSprite2D
 
 func _ready() -> void:
@@ -36,6 +37,8 @@ func _physics_process(delta: float) -> void:
 			ajuste_velocidade()
 		position.x += speed
 		move_and_slide()
+	if clicks_doidos == clicks_max:
+		get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")
 	
 
 func anim_morte():
@@ -49,6 +52,7 @@ func _on_animated_sprite_2d_animation_finished(anim:String=$AnimatedSprite2D.ani
 		play = true
 		$"..".comecar()
 		animacao.play("Idle")
+		
 	if anim=="morte":
 		print("é pra da restart")
 		#if vive == false:
@@ -60,4 +64,5 @@ func _on_animated_sprite_2d_animation_finished(anim:String=$AnimatedSprite2D.ani
 
 
 func _on_button_pressed() -> void:
+	clicks_doidos += 1
 	ajuste_velocidade()
