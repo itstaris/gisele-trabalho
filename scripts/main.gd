@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	#Globals.pontitos += 1
 	#get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")
 
-
-func _on_ganhou_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	Globals.pontitos += 1
-	get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")
+#
+#func _on_ganhou_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	#Globals.pontitos += 1
+	#get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")

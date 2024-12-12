@@ -38,6 +38,7 @@ func _physics_process(delta: float) -> void:
 		position.x += speed
 		move_and_slide()
 	if clicks_doidos == clicks_max:
+		Globals.pontitos += 1
 		get_tree().change_scene_to_file("res://scenes/scences timo/genhouuuu.tscn")
 	
 
